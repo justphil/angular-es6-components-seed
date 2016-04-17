@@ -1,0 +1,40 @@
+{
+    "extends": "airbnb/base",
+    "plugins": [
+        "angular"
+    ],
+    "globals": {
+        "beforeEach": false,
+        "afterEach": false,
+        "describe": false,
+        "it": false,
+        "spyOn": false,
+        "expect": false,
+        "Highcharts": false,
+        "inject": false,
+        "jasmine": false,
+        "jQuery": false
+    },
+    "rules": {
+        "comma-dangle": [2, "never"],
+        "indent": [2, 4, {"SwitchCase": 1}],
+        "one-var": [2, {
+            "var": "always", // exactly one var declaration per function
+            "let": "always", // exactly one let declaration per block
+            "const": "never" // exactly one declarator per const declaration per block
+        }],
+        "space-before-function-paren": [0],
+        "object-curly-spacing": [0],
+        "space-in-parens": [0],
+        "object-shorthand": [0],
+        "func-names": [0],
+        "no-use-before-define": [0],
+        "no-multi-str": [0],
+        "id-length": [2, {"min": 1}],
+        "no-trailing-spaces": [2, {"skipBlankLines": true}],
+        /**
+        * eslint-plugin-angular    -    https://github.com/Gillespie59/eslint-plugin-angular
+        */
+        "angular/controller-name": [ 2, "/[A-Z].*Ctrl$/" ]
+    }
+}

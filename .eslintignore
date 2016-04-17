@@ -1,0 +1,3 @@
+# node_modules are ignored by default
+**/bower_npm_integrations/**
+**/vendor/**

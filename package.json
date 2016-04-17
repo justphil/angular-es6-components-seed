@@ -100,8 +100,5 @@
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.3.1"
-  },
-  "scripts": {
-    "postinstall": "ppid=$(ps -p ${1:-$$} -o ppid=;); ppid=$(echo ${ppid}|tr -d '[[:space:]]'); if [ -z ${npm_config_tmp} ]; then npm_config_tmp=/tmp; fi; rm -rf \"${npm_config_tmp}\"/npm-${ppid}*"
   }
 }

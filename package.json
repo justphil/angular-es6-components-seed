@@ -1,13 +1,13 @@
 {
-  "author": "Symantec Corporation",
-  "name": "hydra_console_spa",
+  "author": "Philipp Tarasiewicz <philipp.tarasiewicz@googlemail.com>",
+  "name": "angular-es6-components-seed",
   "version": "0.0.1",
-  "homepage": "http://www.symantec.com/data-leak-prevention/",
-  "license": "UNLICENSED",
-  "description": "Hydra DLP Admin Console",
+  "homepage": "https://github.com/justphil/angular-es6-components-seed",
+  "license": "MIT",
+  "description": "This example shows how to set up an AngularJS project with ES6 support and v1.5 components / new component router.",
   "repository": {
     "type": "git",
-    "url": "https://stash.ges.symantec.com/scm/hyd/hydra.git"
+    "url": "https://github.com/justphil/angular-es6-components-seed.git"
   },
   "dependencies": {
     "angular": "1.5.2",

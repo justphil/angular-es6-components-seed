@@ -1,8 +1,4 @@
 /*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
-/*
  gulpfile.js
  ===========
  Rather than manage one giant configuration file responsible

@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation. All Rights Reserved.
- */
-
 var getOriginalKarmaConfig = require('./karma.conf');
 
 // Karma configuration for debugging unit tests

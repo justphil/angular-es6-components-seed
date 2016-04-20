@@ -82,11 +82,22 @@ function bundle(browserifyInstance, bundleConfig, devMode) {
         '*templates*.js'
     ]));
 
+    var ignorePath;
     if (devMode) {
-        htmlTarget = htmlTarget.pipe(inject(injectables, {ignorePath: config.developmentInjectIgnorePath, addRootSlash: false}))
+        ignorePath = config.developmentInjectIgnorePath;
+        if (ignorePath.substr(0, 2) === './') {
+            ignorePath = ignorePath.substr(2);
+        }
+
+        htmlTarget = htmlTarget.pipe(inject(injectables, {ignorePath: ignorePath, addRootSlash: false}))
                                 .pipe(gulp.dest(config.publicDirectory));
     } else {
-        htmlTarget = htmlTarget.pipe(inject(injectables, {ignorePath: config.productionInjectIgnorePath, addRootSlash: false}))
+        ignorePath = config.productionInjectIgnorePath;
+        if (ignorePath.substr(0, 2) === './') {
+            ignorePath = ignorePath.substr(2);
+        }
+
+        htmlTarget = htmlTarget.pipe(inject(injectables, {ignorePath: ignorePath, addRootSlash: false}))
                                 .pipe(gulp.dest(config.productionDirectory));
     }
 

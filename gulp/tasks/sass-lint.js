@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     scss = require('postcss-scss'),

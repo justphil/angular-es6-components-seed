@@ -1,8 +1,4 @@
 /*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
-/*
  bundleLogger
  ------------
  Provides gulp style logs to the bundle method in browserify.js

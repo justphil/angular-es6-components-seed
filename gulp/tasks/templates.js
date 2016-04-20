@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var gulp = require('gulp'),
     revReplace = require('gulp-rev-replace'),
     browserSync  = require('browser-sync'),

@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var notify = require("gulp-notify");
 
 module.exports = function(errorObject, callback) {

@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     sourcemaps = require('gulp-sourcemaps'),

@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var browserSync  = require('browser-sync');
 var config       = require('../config/html');
 var gulp         = require('gulp');

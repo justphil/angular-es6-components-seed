@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation. All Rights Reserved.
- */
-
 var transformTools = require('browserify-transform-tools');
 var optionalFile = 'src/_optional/_optional.js';
 

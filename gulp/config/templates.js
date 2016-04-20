@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var config = require('./');
 
 var globPattern = '/**/*.tpl.html';

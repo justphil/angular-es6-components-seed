@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation. All Rights Reserved.
- */
-
 var gulp        = require('gulp'),
     eslint      = require('gulp-eslint'),
     jsConfig    = require('../config/js');

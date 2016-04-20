@@ -1,8 +1,4 @@
 /*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
-/*
  Browserify Task
  ---------------
  Bundle JavaScript-ish files with Browserify and use Babel as transform!

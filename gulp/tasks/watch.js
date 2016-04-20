@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016 Symantec Corporation.  All Rights Reserved.
- */
-
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     gulpSequence = require('gulp-sequence'),

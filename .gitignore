@@ -1,4 +1,6 @@
 .idea/
-node_modules/
-dist/
+.tmp/
 dev/
+dist/
+node_modules/
+target/

@@ -1,26 +1,4 @@
-######################
-# Project Specific
-######################
-/dev
-/prod
-/dist
-/.tmp
-.settings/*
-
-######################
-# Node
-######################
-/node_modules
-node_modules_cache.tar
-
-######################
-# Bower
-######################
-/vendor
-vendor_cache.tar
-
-######################
-# Maven
-######################
-/target
-/.settings/
+.idea/
+node_modules/
+dist/
+dev/

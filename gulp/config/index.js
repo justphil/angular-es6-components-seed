@@ -1,8 +1,8 @@
 var config = {};
 
 config.sourceDirectory              = './src';
-config.publicDirectory              = '../hydra_console_ui_server/src/main/webapp';
-config.productionDirectory          = '../hydra_console_ui_server/src/main/webapp';
+config.publicDirectory              = './dev';
+config.productionDirectory          = './dist';
 config.nodeModulesDirectory         = './node_modules';
 config.tempDir                      = './.tmp';
 config.developmentInjectIgnorePath  = config.publicDirectory;

@@ -9,7 +9,10 @@
         <!-- endinject -->
     </head>
     <body>
-        <h1>Hello World</h1>
+    <div ng-controller="MainCtrl as mainCtrl">
+        <color-picker init-r="mainCtrl.r" init-g="mainCtrl.g" init-b="mainCtrl.b"></color-picker>
+    </div>
+
         <!-- inject:js -->
         <!-- endinject -->
     </body>

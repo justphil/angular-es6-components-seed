@@ -16,14 +16,18 @@ import angular from 'angular';
 // Run Blocks
 
 // Controllers
+import MainCtrl from './controllers/MainCtrl';
 
 // Services
 
 // Filters
 
 // Directives
+import colorPicker from './directives/colorPicker';
 
 /**
  * Register all components within Angular.
  */
-angular.module('myApp', []);
+angular.module('myApp', [])
+.controller('MainCtrl', MainCtrl)
+.directive('colorPicker', colorPicker);

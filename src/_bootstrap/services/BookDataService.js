@@ -1,7 +1,9 @@
 import angular from 'angular';
 
 class BookDataService {
-    constructor() {
+    constructor($q) {
+        'ngInject';
+        this.$q = $q;
         this.books = [
             {
                 title: 'AngularJS for Beginners',
@@ -25,7 +27,19 @@ class BookDataService {
     }
 
     getAllBooks() {
-        return angular.copy(this.books);
+        return this.$q.when({
+            data: angular.copy(this.books)
+        });
+
+        /*const deferred = this.$q.defer();
+
+        setTimeout(function() {
+            deferred.resolve({
+                data: angular.copy(this.books)
+            });
+        }.bind(this), 0);
+
+        return deferred.promise;*/
     }
 }
 

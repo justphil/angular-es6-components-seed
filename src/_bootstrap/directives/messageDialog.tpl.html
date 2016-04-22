@@ -1,8 +1,8 @@
-<div class="overlay">
+<div class="overlay" ng-show="visible">
     <div class="dialog">
-        <div class="title">TITLE</div>
-        <div class="content">CONTENT</div>
-        <button class="action-button">YES</button>
-        <button class="action-button">NO</button>
+        <div class="title">{{ title }}</div>
+        <div class="content" ng-transclude></div>
+        <button class="action-button" ng-click="onYes()">YES</button>
+        <button class="action-button" ng-click="onNo()">NO</button>
     </div>
 </div>

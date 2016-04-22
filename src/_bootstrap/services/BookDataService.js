@@ -92,6 +92,10 @@ class BookDataService {
     createNewBook(book) {
         return this.$http.post(this.baseUrl + '/books', book);
     }
+
+    deleteBook(isbn) {
+        return this.$http.delete(this.baseUrl + '/books/' + isbn);
+    }
 }
 
 export default BookDataService;

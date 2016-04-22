@@ -5,6 +5,7 @@
 // Angular Core Libs (available via npm)
 import angular from 'angular';
 import angularRoute from 'angular-route';
+import angularMessages from 'angular-messages';
 
 /**
  * SPA code
@@ -21,6 +22,7 @@ import routeConfig from './_configs/routeConfig';
 import MainCtrl from './controllers/MainCtrl';
 import BookListCtrl from '../book-list/BookListCtrl';
 import BookDetailsCtrl from '../book-details/BookDetailsCtrl';
+import NewBookCtrl from '../new-book/NewBookCtrl';
 
 // Services
 import BookDataService from './services/BookDataService';
@@ -35,11 +37,13 @@ import colorPicker from './directives/colorPicker';
  * Register all components within Angular.
  */
 angular.module('myApp', [
-    angularRoute
+    angularRoute,
+    angularMessages
 ])
 .controller('MainCtrl', MainCtrl)
 .controller('BookListCtrl', BookListCtrl)
 .controller('BookDetailsCtrl', BookDetailsCtrl)
+.controller('NewBookCtrl', NewBookCtrl)
 .service('BookDataService', BookDataService)
 .service('DataEnhancer', DataEnhancer)
 .directive('colorPicker', colorPicker)

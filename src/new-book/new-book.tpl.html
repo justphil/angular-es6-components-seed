@@ -1,0 +1,45 @@
+<h1>Create New Book</h1>
+
+
+Ist das Form valid? -> {{ newBookCtrl.bookForm.$valid }}
+
+<form name="newBookCtrl.bookForm" novalidate>
+    <input type="text"
+           name="title"
+           ng-model="newBookCtrl.book.title"
+           placeholder="Title" required>
+
+    <input type="text"
+           name="author"
+           ng-model="newBookCtrl.book.author"
+           placeholder="Author" required>
+
+    <input type="text"
+           name="isbn"
+           ng-model="newBookCtrl.book.isbn"
+           placeholder="ISBN" required>
+
+    <input type="number"
+           name="numPages"
+           ng-model="newBookCtrl.book.numPages"
+           placeholder="Number of Pages"
+           min="0"
+           max="1000"
+           required>
+    <div ng-messages="newBookCtrl.bookForm.numPages.$error">
+        <span ng-message="required">
+            Bitte tätigen Sie eine Eingabe.
+        </span>
+
+        <span ng-message="min">
+            Die kleinstmögliche Zahl ist 0.
+        </span>
+
+        <span ng-message="max">
+            Die größtmögliche Zahl ist 1000.
+        </span>
+    </div>
+
+    <button ng-click="newBookCtrl.createNewBook(newBookCtrl.book)"
+            ng-disabled="newBookCtrl.bookForm.$invalid">Create New Book</button>
+</form>

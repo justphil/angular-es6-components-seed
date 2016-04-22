@@ -8,6 +8,10 @@ export default function routeConfig($routeProvider) {
         templateUrl: 'templates/book-list/book-list.tpl.html',
         controller: 'BookListCtrl',
         controllerAs: 'bookListCtrl'
+    }).when('/new-book', {
+        templateUrl: 'templates/new-book/new-book.tpl.html',
+        controller: 'NewBookCtrl',
+        controllerAs: 'newBookCtrl'
     }).otherwise({
         redirectTo: '/books'
     });

@@ -2,7 +2,7 @@ import angular from 'angular';
 import 'angular-mocks';
 
 describe('BookDataService', function() {
-    let BookDataService, $rootScope;
+    let BookDataService, $httpBackend, REST_BASE_URL;
 
     beforeEach(angular.mock.module('myApp'));
 
@@ -16,9 +16,10 @@ describe('BookDataService', function() {
         });
     }));
 
-    beforeEach(inject(function(_BookDataService_, _$rootScope_) {
+    beforeEach(inject(function(_BookDataService_, _$httpBackend_, _REST_BASE_URL_) {
         BookDataService = _BookDataService_;
-        $rootScope = _$rootScope_;
+        $httpBackend = _$httpBackend_;
+        REST_BASE_URL = _REST_BASE_URL_;
     }));
 
     it('should be defined', function() {
@@ -36,45 +37,19 @@ describe('BookDataService', function() {
     });
 
     describe('getAllBooks()', function() {
-        it('should return an array of book objects', function() {
-            let books;
-
-            console.log('BEFORE');
-            BookDataService.getAllBooks().then(function(response) {
-                console.log('INNER');
-                books = response.data;
-            });
-
-            $rootScope.$apply();
-
-            expect(books).toEqual(jasmine.any(Array));
-            expect(books.length).toBe(3);
-            books.forEach(function(book) {
-                expect(isValidBook(book)).toBe(true);
-                expect(book.whatever).toBe('updated');
-            });
+        it('should invoke the proper REST endpoint', function() {
+            $httpBackend.expectGET(REST_BASE_URL + '/books').respond([{}]);
+            BookDataService.getAllBooks();
+            $httpBackend.flush(1);
         });
     });
 
     describe('getBookByIsbn()', function() {
-        it('should return the book with the passed isbn', function() {
-            let book;
-
-            BookDataService.getBookByIsbn('111-111-111').then(function(response) {
-                book = response.data;
-            });
-
-            $rootScope.$apply();
-
-            expect(isValidBook(book)).toBe(true);
+        it('should invoke the proper REST endpoint', function() {
+            const isbn = 'whatever';
+            $httpBackend.expectGET(REST_BASE_URL + '/books/' + isbn).respond({});
+            BookDataService.getBookByIsbn(isbn);
+            $httpBackend.flush(1);
         });
     });
-
-    function isValidBook(book) {
-        return angular.isObject(book)
-                && angular.isString(book.title)
-                && angular.isString(book.author)
-                && angular.isString(book.isbn)
-                && angular.isNumber(book.numPages);
-    }
 });

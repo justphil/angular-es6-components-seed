@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-class BookDataService {
+class InMemoryBookDataService {
     constructor($q, DataEnhancer) {
         'ngInject';
         this.$q = $q;
@@ -64,6 +64,33 @@ class BookDataService {
                 data: null
             });
         }
+    }
+
+    createNewBook(book) {
+        this.books.push(book);
+        return this.$q.when({
+            data: true
+        });
+    }
+}
+
+class BookDataService {
+    constructor($http) {
+        'ngInject';
+        this.$http = $http;
+        this.baseUrl = 'http://ajs-workshop.herokuapp.com/api';
+    }
+
+    getAllBooks() {
+        return this.$http.get(this.baseUrl + '/books');
+    }
+
+    getBookByIsbn(isbn) {
+        return this.$http.get(this.baseUrl + '/books/' + isbn);
+    }
+
+    createNewBook(book) {
+        return this.$http.post(this.baseUrl + '/books', book);
     }
 }
 

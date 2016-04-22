@@ -32,6 +32,7 @@ import DataEnhancer from './services/DataEnhancer';
 
 // Directives
 import colorPicker from './directives/colorPicker';
+import messageDialog from './directives/messageDialog';
 
 /**
  * Register all components within Angular.
@@ -47,4 +48,6 @@ angular.module('myApp', [
 .service('BookDataService', BookDataService)
 .service('DataEnhancer', DataEnhancer)
 .directive('colorPicker', colorPicker)
+.directive('messageDialog', messageDialog)
+.value('REST_BASE_URL', 'http://ajs-workshop.herokuapp.com/api')
 .config(routeConfig);

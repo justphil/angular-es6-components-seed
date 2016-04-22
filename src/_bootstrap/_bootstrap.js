@@ -4,12 +4,14 @@
 
 // Angular Core Libs (available via npm)
 import angular from 'angular';
+import angularRoute from 'angular-route';
 
 /**
  * SPA code
  */
 
 // Configs
+import routeConfig from './_configs/routeConfig';
 
 // Constants
 
@@ -17,8 +19,10 @@ import angular from 'angular';
 
 // Controllers
 import MainCtrl from './controllers/MainCtrl';
+import BookListCtrl from '../book-list/BookListCtrl';
 
 // Services
+import BookDataService from './services/BookDataService';
 
 // Filters
 
@@ -28,6 +32,11 @@ import colorPicker from './directives/colorPicker';
 /**
  * Register all components within Angular.
  */
-angular.module('myApp', [])
+angular.module('myApp', [
+    angularRoute
+])
 .controller('MainCtrl', MainCtrl)
-.directive('colorPicker', colorPicker);
+.controller('BookListCtrl', BookListCtrl)
+.service('BookDataService', BookDataService)
+.directive('colorPicker', colorPicker)
+.config(routeConfig);

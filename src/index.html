@@ -9,12 +9,14 @@
         <!-- endinject -->
     </head>
     <body>
-    <div ng-controller="MainCtrl as mainCtrl">
+        <div ng-view></div>
+
+    <!--<div ng-controller="MainCtrl as mainCtrl">
         <color-picker init-r="{{ mainCtrl.r }}"
                       init-g="{{ mainCtrl.g }}"
                       init-b="{{ mainCtrl.b }}"
                       on-color-change="mainCtrl.onColorChange(r, g, b)"></color-picker>
-    </div>
+    </div>-->
 
         <!-- inject:js -->
         <!-- endinject -->

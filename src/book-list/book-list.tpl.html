@@ -1,0 +1,18 @@
+<h1>Books</h1>
+<input type="text" class="form-control" ng-model="bookListCtrl.searchText">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="book in bookListCtrl.books | filter:bookListCtrl.searchText">
+            <td ng-bind="book.title"></td>
+            <td ng-bind="book.author"></td>
+            <td ng-bind="book.isbn"></td>
+        </tr>
+    </tbody>
+</table>

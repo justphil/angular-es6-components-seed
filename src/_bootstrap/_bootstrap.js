@@ -20,6 +20,7 @@ import routeConfig from './_configs/routeConfig';
 // Controllers
 import MainCtrl from './controllers/MainCtrl';
 import BookListCtrl from '../book-list/BookListCtrl';
+import BookDetailsCtrl from '../book-details/BookDetailsCtrl';
 
 // Services
 import BookDataService from './services/BookDataService';
@@ -37,6 +38,7 @@ angular.module('myApp', [
 ])
 .controller('MainCtrl', MainCtrl)
 .controller('BookListCtrl', BookListCtrl)
+.controller('BookDetailsCtrl', BookDetailsCtrl)
 .service('BookDataService', BookDataService)
 .directive('colorPicker', colorPicker)
 .config(routeConfig);

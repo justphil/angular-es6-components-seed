@@ -41,6 +41,22 @@ class BookDataService {
 
         return deferred.promise;*/
     }
+
+    getBookByIsbn(isbn) {
+        const filteredBooks = this.books.filter(function(book) {
+            return isbn === book.isbn;
+        });
+
+        if (filteredBooks.length > 0) {
+            return this.$q.when({
+                data: angular.copy(filteredBooks[0])
+            });
+        } else {
+            return this.$q.when({
+                data: null
+            });
+        }
+    }
 }
 
 export default BookDataService;

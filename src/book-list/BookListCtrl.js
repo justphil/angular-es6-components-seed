@@ -3,7 +3,7 @@ export default function BookListCtrl($log, BookDataService) {
 
     $log.info('BEFORE');
     BookDataService.getAllBooks().then(function(response) {
-        $log.info('RESOLVE');
+        $log.info('RESOLVE', response.data);
         this.books = response.data;
     }.bind(this)).catch(function(error) {
         $log.error('An error occurred', error);

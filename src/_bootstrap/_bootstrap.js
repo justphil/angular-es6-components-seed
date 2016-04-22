@@ -24,6 +24,7 @@ import BookDetailsCtrl from '../book-details/BookDetailsCtrl';
 
 // Services
 import BookDataService from './services/BookDataService';
+import DataEnhancer from './services/DataEnhancer';
 
 // Filters
 
@@ -40,5 +41,6 @@ angular.module('myApp', [
 .controller('BookListCtrl', BookListCtrl)
 .controller('BookDetailsCtrl', BookDetailsCtrl)
 .service('BookDataService', BookDataService)
+.service('DataEnhancer', DataEnhancer)
 .directive('colorPicker', colorPicker)
 .config(routeConfig);
